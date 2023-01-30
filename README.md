@@ -1,38 +1,63 @@
-# Author
-	Shimja Joy
 
-## Created On
-	29/01/2022
+# Project Title
 
-### Project Title
-  Built a server that runs on the 3500 port. This mainly performs out the end points.
-  1./token --->Generate the tokens
-  2./time ---> Collect the server time
-  3./metrics ---> Collect all possible default metrics
-   
-#### Github Repository URL
-	https://github.com/shimjajoy/serverconnexone.git
+To obtaining server time and the default metrics values
+## API Reference
 
-##### Getting Started
+#### Get tokens
 
-	Open cmd
-	Follow the below commands in cmd
-	mkdir server
-	cd server
-	npm init // install dependencies
-  Open the url http://localhost:3500/ from any browser. Verifie whether browser started or not 
-		
-###### Test Project
-  Download postman application from browser(https://www.postman.com/downloads/)
-	Open postman
-	1.Select Method: GET
-	  Enter request url: localhost:3500/token
-    Check result in Body tab of postman in JSON format
-   2.Select Method: GET
-	  Enter request url: localhost:3500/time
-    Add Authorization as key in Headers tab and it's value as accessToken from localhost:3500/token response body
-    Check result in Body tab of postman in JSON format
-   2.Select Method: GET
-	  Enter request url: localhost:3500/metrics
-    Add Authorization as key in Headers tab and it's value as accessToken from localhost:3500/token response body
-    Check result in Body tab of postman 
+```http
+  GET /token
+```
+#### Get time
+
+```http
+  GET /time
+```
+Add HTTP Request headers
+
+| Key | Value     | Description                |
+| :-------- | :------- | :------------------------- |
+| `Authorization` | `string` | **Required**. accessToken |
+
+#### Get metrics
+
+```http
+  GET /metrics
+```
+Add HTTP Request headers
+
+| Key | Value     | Description                |
+| :-------- | :------- | :------------------------- |
+| `Authorization` | `string` | **Required**. accessToken |
+
+
+
+
+## Authors
+
+- [@shimjajoy](https://www.github.com/shimjajoy)
+
+
+## Installation
+
+Install with npm
+
+```bash
+Go to the directory on your local computer where you want to clone the repository.
+
+git clone https://github.com/shimjajoy/serverconnexone.git  (verify that git is already installed on your system, if not please download and install depenig on your os).
+
+go to serverconnexone using the command,cd serverconnexone 
+
+npm i
+
+npm run dev
+
+If npm run was successful.You can see message "[nodemon] starting `node server.js` ".
+
+Open your browser at http://localhost:3500 
+
+If server is up  you can see the message "Server running at 3500."
+```
+    
