@@ -60,4 +60,8 @@ Open your browser at http://localhost:3500
 
 If server is up  you can see the message "Server running at 3500."
 ```
-    
+## Tech Stack
+
+**Server:** Node (Version 18.12.0), Express (Version 4.18.2)
+
+**Download Node from:** [https://nodejs.org/en/download/](https://nodejs.org/en/download/)   
